@@ -1,0 +1,15 @@
+#!/bin/bash
+i=$1
+while [ $i -lt $2 ]; do
+
+	j=$3
+	while [ $j -lt $4 ]; do
+		k=0
+		while [ $k -lt $5 ]; do
+			matlab -nosplash -nodesktop -r "test($i*10,$j*10,$j*10,$6,$7)"
+			k=$((k+1))
+		done
+	done
+
+	i=$((i+1))
+done
